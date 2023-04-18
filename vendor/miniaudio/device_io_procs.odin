@@ -4,6 +4,8 @@ when ODIN_OS == .Windows {
 	foreign import lib "lib/miniaudio.lib"
 } else when ODIN_OS == .Linux {
 	foreign import lib "lib/miniaudio.a"
+} else when ODIN_OS == .Darwin {
+	foreign import lib "lib/darwin/miniaudio.a"
 } else {
 	foreign import lib "system:miniaudio"
 }
